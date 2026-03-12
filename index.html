@@ -11,7 +11,7 @@
         :root {
             --bg-color: #0a0a0a;
             --surface-color: #161616;
-            --accent-color: #00ff9d; /* Electric Green accent */
+            --accent-color: #00ff9d; 
             --text-main: #ffffff;
             --text-dim: #a0a0a0;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -32,7 +32,6 @@
             overflow-x: hidden;
         }
 
-        /* --- Layout --- */
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -51,7 +50,6 @@
             transform: translateY(0);
         }
 
-        /* --- Navigation --- */
         nav {
             position: fixed;
             top: 0;
@@ -89,7 +87,6 @@
             color: var(--accent-color);
         }
 
-        /* --- Hero Section --- */
         .hero {
             height: 100vh;
             display: flex;
@@ -145,7 +142,6 @@
             box-shadow: 0 10px 20px rgba(0, 255, 157, 0.2);
         }
 
-        /* --- Skills --- */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -161,7 +157,6 @@
             border: 1px solid rgba(255, 255, 255, 0.03);
         }
 
-        /* --- Projects --- */
         .project-card {
             background: var(--surface-color);
             border-radius: 16px;
@@ -189,7 +184,6 @@
             color: var(--text-dim);
         }
 
-        /* --- Footer --- */
         footer {
             padding: 50px 0;
             text-align: center;
@@ -201,6 +195,13 @@
             margin: 0 1rem;
             text-decoration: none;
             font-weight: 600;
+            border-bottom: 1px solid transparent;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--accent-color);
         }
 
         @media (max-width: 768px) {
@@ -226,29 +227,28 @@
     <section class="hero visible">
         <div class="container">
             <h1>Scaling Brands with <span>AI & Strategy.</span></h1>
-            <p>I help businesses dominate digital spaces by combining data-driven marketing with AI automation.</p>
+            <p>Digital Marketing Professional | AI Content Strategist | E-commerce Expert</p>
             <div class="btn-group">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                <a href="#projects" class="btn btn-primary">Projects Dekhein</a>
+                <a href="#contact" class="btn btn-secondary">Baat Karte Hain</a>
             </div>
         </div>
     </section>
 
     <section id="about" class="container">
-        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">About Me</h2>
+        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Mere Baare Mein</h2>
         <p style="font-size: 1.2rem; color: var(--text-dim); max-width: 800px;">
-            I am a Digital Marketing professional and AI Content Strategist currently pursuing my degree at Jamia Millia Islamia. 
-            By bridging the gap between traditional marketing and AI-generated media, I create high-impact content ecosystems 
-            that capture attention in the modern attention economy.
+            Main ek Digital Marketing professional aur AI Content Strategist hoon jo Jamia Millia Islamia se apni degree kar raha hoon. 
+            Main modern AI tools aur marketing strategies ko combine karke brands ko digital space mein grow karne mein madad karta hoon.
         </p>
         
         <div class="skills-grid">
-            <div class="skill-card">Social Media Marketing</div>
-            <div class="skill-card">AI Video Generation</div>
+            <div class="skill-card">Digital Marketing</div>
+            <div class="skill-card">AI Content Creation</div>
             <div class="skill-card">E-commerce Strategy</div>
-            <div class="skill-card">Content Automation</div>
-            <div class="skill-card">SEO & Digital Ads</div>
-            <div class="skill-card">Brand Identity</div>
+            <div class="skill-card">Social Media Ads</div>
+            <div class="skill-card">SEO Optimization</div>
+            <div class="skill-card">Brand Management</div>
         </div>
     </section>
 
@@ -256,53 +256,41 @@
         <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Featured Projects</h2>
 
         <div class="project-card">
-            <span class="project-tag">AI Automation & Education</span>
-            <h3>AIVision.Lab (Multi-Platform)</h3>
-            <p>Most brands struggle to produce consistent, high-quality video content without massive production costs. I built a automated content engine that generates educational animated videos using AI.</p>
-            <p class="project-tech">Tech: AI Video Generators, Canva, CapCut, Social Analytics</p>
-            <p><strong>Outcome:</strong> Successfully scaled a YouTube and Instagram presence with automated workflows and consistent watermarking.</p>
+            <span class="project-tag">AI & Automation</span>
+            <h3>AIVision.Lab</h3>
+            <p>AI ka use karke automated educational content create kiya jo social platforms par high engagement lata hai.</p>
+            <p class="project-tech">Tech: AI Video Tools, Social Analytics</p>
+            <p><strong>Result:</strong> Scalable content workflow aur badhti hui audience reach.</p>
         </div>
 
         <div class="project-card">
-            <span class="project-tag">Religious Content Strategy</span>
-            <h3>IslamicVision AI</h3>
-            <p>Solved the challenge of creating culturally specific, high-engagement short-form content in Urdu by leveraging specialized AI prompt engineering and localized aesthetics.</p>
-            <p class="project-tech">Tech: Generative AI, Urdu Scripting, Vertical Video Optimization</p>
-            <p><strong>Outcome:</strong> Established a niche-specific channel optimized for the Instagram/YouTube Shorts algorithm.</p>
-        </div>
-
-        <div class="project-card">
-            <span class="project-tag">E-commerce & Branding</span>
-            <h3>T-Shirt Brand Launchpad</h3>
-            <p>Designed an end-to-end e-commerce framework to solve the hurdle of moving from concept to market for apparel brands.</p>
-            <p class="project-tech">Tech: Shopify/E-commerce Tools, Digital Marketing, GitHub Portfolio</p>
-            <p><strong>Outcome:</strong> Developed a strategic roadmap for brand identity and customer acquisition.</p>
+            <span class="project-tag">Branding</span>
+            <h3>T-Shirt Brand Strategy</h3>
+            <p>Ek apparel brand ke liye end-to-end e-commerce roadmap aur marketing funnel design kiya.</p>
+            <p class="project-tech">Tech: Shopify, Meta Ads, Brand Identity</p>
+            <p><strong>Result:</strong> Clear brand positioning aur effective customer acquisition plan.</p>
         </div>
     </section>
 
     <section id="contact" class="container" style="text-align: center;">
-        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Start a Conversation</h2>
-        <p style="color: var(--text-dim); margin-bottom: 3rem;">Interested in AI-driven growth? Reach out via the channels below.</p>
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Contact Karein</h2>
+        <p style="color: var(--text-dim); margin-bottom: 3rem;">Aap niche diye gaye links ke zariye mujhse jud sakte hain:</p>
         <div class="social-links">
-            <a href="mailto:your-email@example.com">Email</a>
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+            <a href="mailto:tazimkhan5173@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/tazim-khan-21b34a25a" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Tazimkha" target="_blank">GitHub</a>
             <a href="https://instagram.com/tazeemkhan349" target="_blank">Instagram</a>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Tazim Khan. Built for the future of marketing.</p>
+            <p>&copy; 2026 Tazim Khan. Professional Portfolio.</p>
         </div>
     </footer>
 
     <script>
-        // Simple Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1
-        };
-
+        const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
