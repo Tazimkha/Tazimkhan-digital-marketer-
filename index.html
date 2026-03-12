@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tazim Khan | Digital Marketing & AI Content Strategist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --surface-color: #161616;
+            --accent-color: #00ff9d; /* Electric Green accent */
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Layout --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 100px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition);
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.2rem;
+            letter-spacing: -1px;
+            color: var(--accent-color);
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero span {
+            color: var(--accent-color);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 255, 157, 0.2);
+        }
+
+        /* --- Skills --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .skill-card {
+            background: var(--surface-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        /* --- Projects --- */
+        .project-card {
+            background: var(--surface-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .project-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .project-card h3 {
+            margin: 1rem 0;
+            font-size: 1.8rem;
+        }
+
+        .project-tech {
+            margin: 1rem 0;
+            font-family: monospace;
+            color: var(--text-dim);
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 50px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 3rem; }
+            .btn-group { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <div class="logo">TAZIM.KHAN</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero visible">
+        <div class="container">
+            <h1>Scaling Brands with <span>AI & Strategy.</span></h1>
+            <p>I help businesses dominate digital spaces by combining data-driven marketing with AI automation.</p>
+            <div class="btn-group">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">About Me</h2>
+        <p style="font-size: 1.2rem; color: var(--text-dim); max-width: 800px;">
+            I am a Digital Marketing professional and AI Content Strategist currently pursuing my degree at Jamia Millia Islamia. 
+            By bridging the gap between traditional marketing and AI-generated media, I create high-impact content ecosystems 
+            that capture attention in the modern attention economy.
+        </p>
+        
+        <div class="skills-grid">
+            <div class="skill-card">Social Media Marketing</div>
+            <div class="skill-card">AI Video Generation</div>
+            <div class="skill-card">E-commerce Strategy</div>
+            <div class="skill-card">Content Automation</div>
+            <div class="skill-card">SEO & Digital Ads</div>
+            <div class="skill-card">Brand Identity</div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Featured Projects</h2>
+
+        <div class="project-card">
+            <span class="project-tag">AI Automation & Education</span>
+            <h3>AIVision.Lab (Multi-Platform)</h3>
+            <p>Most brands struggle to produce consistent, high-quality video content without massive production costs. I built a automated content engine that generates educational animated videos using AI.</p>
+            <p class="project-tech">Tech: AI Video Generators, Canva, CapCut, Social Analytics</p>
+            <p><strong>Outcome:</strong> Successfully scaled a YouTube and Instagram presence with automated workflows and consistent watermarking.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-tag">Religious Content Strategy</span>
+            <h3>IslamicVision AI</h3>
+            <p>Solved the challenge of creating culturally specific, high-engagement short-form content in Urdu by leveraging specialized AI prompt engineering and localized aesthetics.</p>
+            <p class="project-tech">Tech: Generative AI, Urdu Scripting, Vertical Video Optimization</p>
+            <p><strong>Outcome:</strong> Established a niche-specific channel optimized for the Instagram/YouTube Shorts algorithm.</p>
+        </div>
+
+        <div class="project-card">
+            <span class="project-tag">E-commerce & Branding</span>
+            <h3>T-Shirt Brand Launchpad</h3>
+            <p>Designed an end-to-end e-commerce framework to solve the hurdle of moving from concept to market for apparel brands.</p>
+            <p class="project-tech">Tech: Shopify/E-commerce Tools, Digital Marketing, GitHub Portfolio</p>
+            <p><strong>Outcome:</strong> Developed a strategic roadmap for brand identity and customer acquisition.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="container" style="text-align: center;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Start a Conversation</h2>
+        <p style="color: var(--text-dim); margin-bottom: 3rem;">Interested in AI-driven growth? Reach out via the channels below.</p>
+        <div class="social-links">
+            <a href="mailto:your-email@example.com">Email</a>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+            <a href="https://instagram.com/tazeemkhan349" target="_blank">Instagram</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Tazim Khan. Built for the future of marketing.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
