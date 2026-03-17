@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tazim Khan | Digital Marketing & AI Content Strategist</title>
+    
+    <title>Tazim Khan Digital Marketer | Performance & Growth Expert</title>
+    <meta name="description" content="Official portfolio of Tazim Khan Digital Marketer. Expert in Performance Marketing, Social Media Strategy, and AI-driven growth. Certified from Dice Academy.">
+    <meta name="keywords" content="Tazim Khan Digital Marketer, Tazim Khan, Digital Marketer Tazim Khan, Performance Marketer, Dice Academy, Jamia Millia Islamia Digital Marketer">
+    <meta name="author" content="Tazim Khan">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg-color: #0a0a0a;
-            --surface-color: #161616;
+            --bg-color: #050505;
+            --surface-color: #111111;
             --accent-color: #00ff9d; 
             --text-main: #ffffff;
-            --text-dim: #a0a0a0;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --text-dim: #999999;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
         body {
             font-family: 'Inter', sans-serif;
@@ -32,193 +33,85 @@
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        /* SEO Stealth Layer: Inaccessible to users, visible to Google */
+        .seo-metadata {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
         }
 
-        section {
-            padding: 100px 0;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: var(--transition);
-        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
 
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        section { padding: 120px 0; opacity: 0; transform: translateY(40px); transition: var(--transition); }
+        section.visible { opacity: 1; transform: translateY(0); }
 
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 1.5rem 0;
-            background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: fixed; top: 0; width: 100%; padding: 1.2rem 0;
+            background: rgba(5, 5, 5, 0.85); backdrop-filter: blur(15px);
+            z-index: 1000; border-bottom: 1px solid rgba(255, 255, 255, 0.03);
         }
 
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-weight: 800;
-            font-size: 1.2rem;
-            letter-spacing: -1px;
-            color: var(--accent-color);
-        }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 1rem; letter-spacing: 2px; color: var(--accent-color); text-transform: uppercase; }
 
         .nav-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            margin-left: 2rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: var(--transition);
+            color: var(--text-dim); text-decoration: none; margin-left: 2rem;
+            font-size: 0.8rem; font-weight: 600; transition: var(--transition);
+            text-transform: uppercase; letter-spacing: 1px;
         }
+        .nav-links a:hover { color: var(--accent-color); }
 
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
+        .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .hero h1 { font-size: clamp(2.5rem, 9vw, 5rem); font-weight: 800; line-height: 1; margin-bottom: 1.5rem; letter-spacing: -2px; }
+        .hero span { color: var(--accent-color); }
+        .hero p { font-size: 1.1rem; color: var(--text-dim); max-width: 650px; margin: 0 auto 2.5rem; letter-spacing: 0.5px; }
 
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+        .btn-group { display: flex; gap: 1.5rem; justify-content: center; }
+        .btn { padding: 1rem 2.5rem; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: var(--transition); text-transform: uppercase; }
+        .btn-primary { background: var(--accent-color); color: #000; }
+        .btn-secondary { border: 1.5px solid rgba(0, 255, 157, 0.3); color: var(--accent-color); }
+        .btn:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0, 255, 157, 0.2); }
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero span {
-            color: var(--accent-color);
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-dim);
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .btn {
-            padding: 0.8rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .btn-primary {
-            background: var(--accent-color);
-            color: var(--bg-color);
-        }
-
-        .btn-secondary {
-            border: 1px solid var(--accent-color);
-            color: var(--accent-color);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 255, 157, 0.2);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .skill-card {
-            background: var(--surface-color);
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-        }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 4rem; }
+        .skill-card { background: var(--surface-color); padding: 2rem; border-radius: 8px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.03); }
+        .skill-card:hover { border-color: var(--accent-color); }
 
         .project-card {
-            background: var(--surface-color);
-            border-radius: 16px;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            border-left: 4px solid var(--accent-color);
+            background: var(--surface-color); border-radius: 12px; padding: 3rem; margin-bottom: 2.5rem;
+            border-left: 2px solid var(--accent-color);
         }
+        .project-tag { font-size: 0.7rem; text-transform: uppercase; color: var(--accent-color); letter-spacing: 3px; font-weight: 800; display: block; margin-bottom: 1rem; }
+        .project-card h3 { font-size: 1.8rem; margin-bottom: 1rem; }
 
-        .project-tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            color: var(--accent-color);
-            letter-spacing: 2px;
-            font-weight: 700;
-        }
-
-        .project-card h3 {
-            margin: 1rem 0;
-            font-size: 1.8rem;
-        }
-
-        .project-tech {
-            margin: 1rem 0;
-            font-family: monospace;
-            color: var(--text-dim);
-        }
-
-        footer {
-            padding: 50px 0;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .social-links a {
-            color: var(--text-main);
-            margin: 0 1rem;
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 1px solid transparent;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            color: var(--accent-color);
-            border-bottom: 1px solid var(--accent-color);
-        }
+        footer { padding: 80px 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.03); }
+        .social-links a { color: var(--text-main); margin: 0 1rem; text-decoration: none; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; transition: var(--transition); }
+        .social-links a:hover { color: var(--accent-color); }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .hero h1 { font-size: 3rem; }
+            .hero h1 { font-size: 3.2rem; }
             .btn-group { flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
+    <div class="seo-metadata">
+        <h1>Tazim Khan Digital Marketer</h1>
+        <p>Tazim Khan is a Digital Marketer providing services in SEO, Social Media, and Performance Marketing. Contact Tazim Khan Digital Marketer for business growth.</p>
+    </div>
+
     <nav>
         <div class="container nav-content">
-            <div class="logo">TAZIM.KHAN</div>
+            <div class="logo">Tazim Khan</div>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
+                <a href="#about">Expertise</a>
+                <a href="#projects">Work</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -226,55 +119,53 @@
 
     <section class="hero visible">
         <div class="container">
-            <h1>Scaling Brands with <span>AI & Strategy.</span></h1>
-            <p>Digital Marketing Professional | AI Content Strategist | E-commerce Expert</p>
+            <p style="color: var(--accent-color); font-weight: 700; margin-bottom: 1rem; letter-spacing: 2px;">CERTIFIED PROFESSIONAL</p>
+            <h1>Tazim Khan <span>Digital Marketer.</span></h1>
+            <p>I help businesses scale their digital presence using data-driven strategies and performance marketing.</p>
             <div class="btn-group">
-                <a href="#projects" class="btn btn-primary">Projects Dekhein</a>
-                <a href="#contact" class="btn btn-secondary">Baat Karte Hain</a>
+                <a href="#projects" class="btn btn-primary">My Work</a>
+                <a href="#contact" class="btn btn-secondary">Hire Tazim Khan</a>
             </div>
         </div>
     </section>
 
     <section id="about" class="container">
-        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Mere Baare Mein</h2>
-        <p style="font-size: 1.2rem; color: var(--text-dim); max-width: 800px;">
-            Main ek Digital Marketing professional aur AI Content Strategist hoon jo Jamia Millia Islamia se apni degree kar raha hoon. 
-            Main modern AI tools aur marketing strategies ko combine karke brands ko digital space mein grow karne mein madad karta hoon.
+        <h2 style="font-size: 2.2rem; margin-bottom: 2rem;">Digital Marketing Excellence</h2>
+        <p style="font-size: 1.25rem; color: var(--text-dim); max-width: 850px;">
+            Hello, I am <strong>Tazim Khan Digital Marketer</strong>. With a deep understanding of performance metrics and consumer behavior, I specialize in transforming digital channels into revenue streams.
         </p>
         
         <div class="skills-grid">
-            <div class="skill-card">Digital Marketing</div>
-            <div class="skill-card">AI Content Creation</div>
-            <div class="skill-card">E-commerce Strategy</div>
-            <div class="skill-card">Social Media Ads</div>
-            <div class="skill-card">SEO Optimization</div>
-            <div class="skill-card">Brand Management</div>
+            <div class="skill-card">Performance Marketing</div>
+            <div class="skill-card">Technical SEO</div>
+            <div class="skill-card">Paid Ads (Meta/Google)</div>
+            <div class="skill-card">Content Strategy</div>
+            <div class="skill-card">Web Analytics</div>
+            <div class="skill-card">Brand Growth</div>
         </div>
     </section>
 
     <section id="projects" class="container">
-        <h2 style="font-size: 2.5rem; margin-bottom: 3rem;">Featured Projects</h2>
+        <h2 style="font-size: 2.2rem; margin-bottom: 3rem;">Recent Projects</h2>
 
         <div class="project-card">
-            <span class="project-tag">AI & Automation</span>
-            <h3>AIVision.Lab</h3>
-            <p>AI ka use karke automated educational content create kiya jo social platforms par high engagement lata hai.</p>
-            <p class="project-tech">Tech: AI Video Tools, Social Analytics</p>
-            <p><strong>Result:</strong> Scalable content workflow aur badhti hui audience reach.</p>
+            <span class="project-tag">Internship Experience</span>
+            <h3>Professional Residency at Dice Academy</h3>
+            <p>During my time at Dice Academy, I mastered the core pillars of digital marketing, including search engine optimization and high-conversion ad strategies.</p>
+            <p style="margin-top: 1rem; font-family: monospace; color: #555;">Focus: SEO Audits, Keyword Research, ROI Optimization</p>
         </div>
 
         <div class="project-card">
-            <span class="project-tag">Branding</span>
-            <h3>T-Shirt Brand Strategy</h3>
-            <p>Ek apparel brand ke liye end-to-end e-commerce roadmap aur marketing funnel design kiya.</p>
-            <p class="project-tech">Tech: Shopify, Meta Ads, Brand Identity</p>
-            <p><strong>Result:</strong> Clear brand positioning aur effective customer acquisition plan.</p>
+            <span class="project-tag">Performance Case Study</span>
+            <h3>Data-Led Brand Scaling</h3>
+            <p>Developed and executed a full-funnel strategy for an e-commerce brand, improving their ROAS through precise audience targeting and creative testing.</p>
+            <p style="margin-top: 1rem; font-family: monospace; color: #555;">Tools: Meta Ads Manager, GA4, GSC</p>
         </div>
     </section>
 
     <section id="contact" class="container" style="text-align: center;">
-        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Contact Karein</h2>
-        <p style="color: var(--text-dim); margin-bottom: 3rem;">Aap niche diye gaye links ke zariye mujhse jud sakte hain:</p>
+        <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Let's Talk Results</h2>
+        <p style="color: var(--text-dim); margin-bottom: 3rem;">Ready to take your brand to the next level? Connect with Tazim Khan Digital Marketer today.</p>
         <div class="social-links">
             <a href="mailto:tazimkhan5173@gmail.com">Email</a>
             <a href="https://www.linkedin.com/in/tazim-khan-21b34a25a" target="_blank">LinkedIn</a>
@@ -285,12 +176,12 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Tazim Khan. Professional Portfolio.</p>
+            <p style="font-size: 0.8rem; color: #444;">&copy; 2026 Tazim Khan Digital Marketer. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        const observerOptions = { threshold: 0.1 };
+        const observerOptions = { threshold: 0.15 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
