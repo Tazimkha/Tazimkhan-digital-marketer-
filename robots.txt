@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap ka pura link yahan hai
+Sitemap: https://tazimkhandigitalmarketer.in/sitemap.xml
