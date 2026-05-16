@@ -153,7 +153,7 @@
     }
     .nav-cta:hover { background: var(--gold2) !important; transform: translateY(-1px); }
 
-    /* Hamburger */
+    /* Hamburger Menu for Mobile */
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
     .hamburger span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: 0.3s; }
 
@@ -209,7 +209,6 @@
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 24px;
-      animation: fadeDown 0.7s ease both;
     }
 
     .hero-badge::before {
@@ -228,7 +227,6 @@
       font-weight: 900;
       line-height: 1.08;
       margin-bottom: 20px;
-      animation: fadeDown 0.8s 0.1s ease both;
     }
 
     .hero-title em {
@@ -253,7 +251,6 @@
       max-width: 520px;
       margin-bottom: 40px;
       line-height: 1.75;
-      animation: fadeDown 0.8s 0.2s ease both;
     }
 
     .hero-sub strong { color: var(--white); font-weight: 600; }
@@ -262,7 +259,6 @@
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
-      animation: fadeDown 0.8s 0.3s ease both;
     }
 
     .btn-primary {
@@ -299,7 +295,6 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      animation: fadeLeft 0.9s 0.4s ease both;
     }
 
     .stat-card {
@@ -399,31 +394,11 @@
     .service-card:hover { transform: translateY(-6px); border-color: rgba(201,168,76,0.4); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
     .service-card:hover::before { opacity: 1; }
 
-    .service-icon {
-      font-size: 2rem;
-      margin-bottom: 18px;
-    }
-
-    .service-name {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .service-desc {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.7;
-      margin-bottom: 18px;
-    }
-
-    .service-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
+    .service-icon { font-size: 2rem; margin-bottom: 18px; }
+    .service-name { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; }
+    .service-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 18px; }
+    .service-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    
     .tag {
       font-size: 0.72rem;
       font-weight: 600;
@@ -460,25 +435,10 @@
       margin-top: 32px;
     }
 
-    .skill-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
+    .skill-item { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; font-weight: 500; }
+    .skill-item::before { content: '▸'; color: var(--gold); font-size: 0.8rem; }
 
-    .skill-item::before {
-      content: '▸';
-      color: var(--gold);
-      font-size: 0.8rem;
-    }
-
-    .about-right {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
+    .about-right { display: flex; flex-direction: column; gap: 20px; }
 
     .highlight-card {
       background: var(--bg3);
@@ -492,23 +452,9 @@
     }
     .highlight-card:hover { border-color: rgba(201,168,76,0.4); }
 
-    .highlight-icon {
-      font-size: 1.6rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .highlight-title {
-      font-weight: 700;
-      font-size: 1rem;
-      margin-bottom: 6px;
-    }
-
-    .highlight-desc {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.65;
-    }
+    .highlight-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+    .highlight-title { font-weight: 700; font-size: 1rem; margin-bottom: 6px; }
+    .highlight-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
 
     /* ===========================
        CERTIFICATE
@@ -522,42 +468,11 @@
       align-items: center;
     }
 
-    .cert-info h3 {
-      font-family: var(--font-display);
-      font-size: 1.6rem;
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
-
-    .cert-info p {
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin-bottom: 28px;
-      line-height: 1.75;
-    }
-
-    .cert-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .cert-row {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      font-size: 0.9rem;
-    }
-
-    .cert-key {
-      color: var(--gold);
-      font-weight: 700;
-      min-width: 120px;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
+    .cert-info h3 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; margin-bottom: 16px; }
+    .cert-info p { font-size: 0.95rem; color: var(--muted); margin-bottom: 28px; line-height: 1.75; }
+    .cert-meta { display: flex; flex-direction: column; gap: 14px; }
+    .cert-row { display: flex; gap: 12px; align-items: center; font-size: 0.9rem; }
+    .cert-key { color: var(--gold); font-weight: 700; min-width: 120px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
     .cert-val { color: var(--white); }
 
     .cert-badge {
@@ -574,7 +489,6 @@
       background: rgba(201,168,76,0.07);
     }
 
-    /* Certificate Card Visual */
     .cert-card {
       background: linear-gradient(135deg, #1a1d24 0%, #0f1117 100%);
       border: 1px solid var(--border);
@@ -594,108 +508,25 @@
       pointer-events: none;
     }
 
-    .cert-card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 30px;
-    }
-
-    .cert-org {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .cert-iso {
-      font-size: 0.7rem;
-      color: var(--muted);
-      text-align: right;
-      line-height: 1.4;
-      border: 1px solid var(--border);
-      padding: 6px 10px;
-      border-radius: 8px;
-    }
-
-    .cert-heading {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    .cert-main-title {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--gold);
-      line-height: 1.1;
-      margin-bottom: 24px;
-    }
-
-    .cert-divider {
-      height: 1px;
-      background: linear-gradient(90deg, var(--gold), transparent);
-      margin: 24px 0;
-      opacity: 0.3;
-    }
-
-    .cert-body-text {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 2;
-    }
+    .cert-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
+    .cert-org { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+    .cert-iso { font-size: 0.7rem; color: var(--muted); text-align: right; line-height: 1.4; border: 1px solid var(--border); padding: 6px 10px; border-radius: 8px; }
+    .cert-heading { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+    .cert-main-title { font-family: var(--font-display); font-size: 2rem; font-weight: 900; color: var(--gold); line-height: 1.1; margin-bottom: 24px; }
+    .cert-divider { height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin: 24px 0; opacity: 0.3; }
+    .cert-body-text { font-size: 0.88rem; color: var(--muted); line-height: 2; }
     .cert-body-text strong { color: var(--white); font-weight: 600; }
-
-    .cert-footer {
-      margin-top: 28px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-
+    .cert-footer { margin-top: 28px; display: flex; justify-content: space-between; align-items: flex-end; }
     .cert-date { font-size: 0.8rem; color: var(--muted); }
     .cert-date span { color: var(--white); font-weight: 600; font-size: 0.9rem; display: block; }
-
-    .cert-seal {
-      width: 56px; height: 56px;
-      border: 2px solid var(--border);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-align: center;
-      color: var(--gold);
-      text-transform: uppercase;
-    }
+    .cert-seal { width: 56px; height: 56px; border: 2px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; font-weight: 700; letter-spacing: 1px; text-align: center; color: var(--gold); text-transform: uppercase; }
 
     /* ===========================
        WHY HIRE ME
     =========================== */
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 20px;
-    }
-
-    .why-card {
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 30px 26px;
-      text-align: center;
-      transition: all 0.3s;
-    }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    .why-card { background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px 26px; text-align: center; transition: all 0.3s; }
     .why-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-4px); }
-
     .why-icon { font-size: 2rem; margin-bottom: 14px; }
     .why-title { font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
     .why-desc { font-size: 0.86rem; color: var(--muted); line-height: 1.65; }
@@ -704,33 +535,13 @@
        CONTACT / CTA
     =========================== */
     #contact { background: var(--bg2); }
-
-    .contact-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
+    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .contact-form { display: flex; flex-direction: column; gap: 18px; }
     .form-group { display: flex; flex-direction: column; gap: 8px; }
-
-    .form-group label {
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
+    
+    .form-group label { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--muted); }
+    
+    .form-group input, .form-group textarea, .form-group select {
       background: var(--bg3);
       border: 1px solid var(--border);
       border-radius: 10px;
@@ -742,9 +553,8 @@
       transition: border-color 0.25s;
       width: 100%;
     }
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus { border-color: var(--gold); }
+    
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--gold); }
     .form-group select option { background: var(--bg3); }
     .form-group textarea { resize: vertical; min-height: 130px; }
 
@@ -752,4 +562,26 @@
       background: var(--gold);
       color: #0a0c10;
       border: none;
-      p
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.25s;
+      margin-top: 10px;
+    }
+    .form-submit:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 10px 25px rgba(201,168,76,0.25); }
+
+    .contact-info-panel { display: flex; flex-direction: column; gap: 30px; }
+    .info-item { display: flex; gap: 20px; align-items: flex-start; }
+    .info-icon { font-size: 1.5rem; color: var(--gold); background: rgba(201,168,76,0.08); padding: 12px; border-radius: 12px; border: 1px solid var(--border); }
+    .info-text h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+    .info-text p { color: var(--muted); font-size: 0.95rem; }
+    .info-text a { transition: color 0.25s; }
+    .info-text a:hover { color: var(--gold); }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+    footer { background: var(--bg); border-top: 1px solid var(--border); padding: 40px 20px; text-align: center; }
+    .footer-wrap { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-betw
